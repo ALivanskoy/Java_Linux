@@ -45,17 +45,17 @@ public class PrizeMachine implements Iterable {
         this.toysPool.add(toy);
     }
 
-    public Toy getPrize(int index) {
-        // Мотод, отдающий игрушку по заданному индексу
+    public Toy getPrize() {
+        // Мотод, отдающий игрушку
 
-        if (index >= 0 || index < this.toysPool.size()) {
+        if (!toysPool.isEmpty()) {
+            int index = new Random().nextInt(this.toysPool.size() - 1);
 
             Toy toy = toysPool.get(index);
             this.toysPool.remove(index);
             return toy;
-
-        } else
-            return null;
+        }
+        return new Toy(" Пусто ");
     }
 
     @Override

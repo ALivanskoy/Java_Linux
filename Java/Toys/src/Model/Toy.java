@@ -29,7 +29,7 @@ public class Toy implements Comparable<Toy> {
 
     @Override
     public String toString() {
-        return "Игрушка \'" + name + "\'" ;
+        return " \'" + name + "\' " ;
     }
 
     @Override

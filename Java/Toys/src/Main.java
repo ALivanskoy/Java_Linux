@@ -1,6 +1,8 @@
 import Model.PrizeMachine;
 import Model.Randomizer;
 import Model.Toy;
+import Presenter.Presenter;
+import View.PrizeMachineView;
 
 import java.util.ArrayList;
 
@@ -8,11 +10,11 @@ public class Main {
     public static void main(String[] args) {
 
 
-        PrizeMachine pm = new PrizeMachine();
-        Randomizer.fillMachine(pm,2,10);
+        PrizeMachine prizeMachine = new PrizeMachine();
+        Randomizer.fillMachine(prizeMachine,5,10);
+        Presenter presenter = new Presenter(prizeMachine);
 
-        pm.getToysPool().forEach(e -> System.out.println(e+" "));
-
+        presenter.run();
 
     }
 }

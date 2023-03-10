@@ -41,7 +41,7 @@ public class Randomizer {
                 sb.append("мягкий");
                 break;
             case 2:
-                sb.append("интерактинвый");
+                sb.append("интерактивный");
                 break;
             case 3:
                 sb.append("музыкальный");
