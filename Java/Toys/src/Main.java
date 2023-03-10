@@ -1,4 +1,5 @@
 import Model.PrizeMachine;
+import Model.Randomizer;
 import Model.Toy;
 
 import java.util.ArrayList;
@@ -8,13 +9,9 @@ public class Main {
 
 
         PrizeMachine pm = new PrizeMachine();
-        Toy t = new Toy("Toy123");
+        Randomizer.fillMachine(pm,2,10);
 
-        for (int i = 0; i < 10; i++) {
-
-            pm.add(new Toy(i, "Toy" + i));
-            pm.add(t);
-        }
+        pm.getToysPool().forEach(e -> System.out.println(e+" "));
 
 
     }

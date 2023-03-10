@@ -2,9 +2,10 @@ package Model;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Random;
 
-public class PrizeMachine {
+public class PrizeMachine implements Iterable {
 
 //    Разыгрывающая машина. Данный класс выполняет работу по определению выигранной игрушки.
 //    У машины есть заводской ТЭГ(id) и пул игрушек для розыгрыша.
@@ -60,6 +61,11 @@ public class PrizeMachine {
     @Override
     public String toString() {
         return "Игровая машина ID" + id;
+    }
+
+    @Override
+    public Iterator<Toy> iterator() {
+        return toysPool.iterator();
     }
 }
 
